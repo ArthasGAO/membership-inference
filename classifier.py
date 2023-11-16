@@ -57,7 +57,7 @@ def train(dataset, n_hidden=50, batch_size=100, epochs=100, learning_rate=0.01, 
 
     if batch_size > len(train_y):
         batch_size = len(train_y)
-
+    -----------------------------------------------------------------------------------------------------------------
     print 'Building model with {} training data, {} classes...'.format(len(train_x), n_out)
     input_var = T.matrix('x')
     target_var = T.ivector('y')
