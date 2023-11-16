@@ -54,7 +54,8 @@ def train_target_model(dataset, epochs=100, batch_size=100, learning_rate=0.01, 
                        n_hidden=50, model='nn', save=True):
     train_x, train_y, test_x, test_y = dataset
     output_layer = train_model(dataset, n_hidden=n_hidden, epochs=epochs, learning_rate=learning_rate,
-                               batch_size=batch_size, model=model, l2_ratio=l2_ratio)
+                               batch_size=batch_size, model=model, l2_ratio=l2_ratio) #get the output from the target model
+                           
     # test data for attack model
     attack_x, attack_y = [], []
     input_var = T.matrix('x')
